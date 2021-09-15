@@ -5,6 +5,8 @@
 pom.xml
 /src/main/java/com/moodanalyser/
 /src/test/java/com/moodanalyser/
+
+
 # Compiled class file
 *.class
 
