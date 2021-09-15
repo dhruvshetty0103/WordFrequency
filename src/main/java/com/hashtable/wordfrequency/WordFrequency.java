@@ -31,7 +31,8 @@ public class WordFrequency
 
 	public static void main(String[] args) {
 		WordFrequency abc = new WordFrequency();
-		abc.add("To be or not to be");
+		abc.add("Paranoids are not paranoid because they are paranoid but because they keep putting themselves"
+				+ " deliberately into paranoid avoidable situations");
 		abc.show();
 	}
 }
