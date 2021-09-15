@@ -13,17 +13,24 @@ public class WordFrequency
 	{
 		String[] splited = words.split(" ");
 		Set<String> keys = table.keySet();
+		keys.remove("avoidable");
 		for (String count : splited) 
 		{
-			 if (table.containsKey(count)) {
-			        table.put(count, table.get(count) + 1);
-			    } else {
-			        table.put(count, 1);
-			    }
+			if(table.containsKey("avoidable"))
+				table.remove("avoidable");
+			else if(table.containsKey(count)) 
+			{
+				table.put(count, table.get(count) + 1);
+			}
+			else 
+			{
+				table.put(count, 1);
+			}
 		}
 	}
 
 	public void show() {
+		
 		for (Entry<String, Integer> entry : table.entrySet()) {
 			System.out.println(entry.getKey() + "\t" + entry.getValue());
 		}
